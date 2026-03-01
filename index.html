@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Nasabah</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            background-color: #f0f2f5; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0; 
+        }
+        .form-container { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            width: 100%; 
+            max-width: 400px; 
+        }
+        h2 { 
+            text-align: center; 
+            color: #333; 
+            margin-bottom: 20px;
+        }
+        .form-group { 
+            margin-bottom: 15px; 
+        }
+        label { 
+            display: block; 
+            margin-bottom: 5px; 
+            color: #555; 
+            font-weight: 500;
+        }
+        input, select { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+            box-sizing: border-box; 
+            font-size: 14px;
+        }
+        input:focus, select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        button { 
+            width: 100%; 
+            padding: 12px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+            font-size: 16px; 
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        button:hover { 
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Pendaftaran Nasabah</h2>
+        
+        <form action="https://formspree.io/f/xvzbnbke" method="POST">
+            
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Email</label>
+                <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="telepon">Nomor Telepon / WhatsApp</label>
+                <input type="tel" id="telepon" name="telepon" placeholder="08123456789" required>
+            </div>
+
+            <div class="form-group">
+                <label for="layanan">Pilih Jenis Layanan</label>
+                <select id="layanan" name="layanan" required>
+                    <option value="">-- Pilih Kategori Layanan --</option>
+                    
+                    <optgroup label="Simpanan & Tabungan">
+                        <option value="Tabungan Umum">Tabungan Umum / Reguler</option>
+                        <option value="Tabungan Pelajar">Tabungan Anak / Pelajar</option>
+                        <option value="Tabungan Bisnis">Tabungan Bisnis / Pengusaha</option>
+                        <option value="Tabungan Valas">Tabungan Valuta Asing (Valas)</option>
+                        <option value="Deposito">Deposito Berjangka</option>
+                    </optgroup>
+                    
+                    <optgroup label="Kartu & Pembayaran">
+                        <option value="Kartu Kredit">Pengajuan Kartu Kredit</option>
+                        <option value="Kartu Debit">Pembuatan Kartu Debit Baru</option>
+                    </optgroup>
+                    
+                    <optgroup label="Pinjaman & Kredit">
+                        <option value="KTA">Kredit Tanpa Agunan (KTA)</option>
+                        <option value="KPR">Kredit Pemilikan Rumah (KPR)</option>
+                        <option value="KKB">Kredit Kendaraan Bermotor (KKB)</option>
+                        <option value="Kredit Usaha">Kredit Modal Usaha</option>
+                    </optgroup>
+                    
+                    <optgroup label="Lainnya">
+                        <option value="Investasi">Layanan Investasi / Reksa Dana</option>
+                        <option value="Bancassurance">Asuransi (Bancassurance)</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <button type="submit">Kirim Pendaftaran</button>
+        </form>
+    </div>
+
+</body>
+</html>
